@@ -1,0 +1,10 @@
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading{
+    color: aqua;
+    text-align: center;
+    margin-bottom: 30px;
+}
