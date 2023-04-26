@@ -1,47 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sorting Algorithm Visualizer</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Visualizer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body onload="drawBars()"  class="container bg-dark">
-    <h1 class="heading">Sorting Algorithm Visualizer!</h1>
-
-    <div class="top">
-        <div>
-
-            <button onclick="drawBars()" type="button" class="btn btn-outline-info">New Array</button>
+</head>
+<header>
+    <h1 align="center" style="color: yellow;">Algorithm Visualizer</h1>
+    <nav>
+        <div class="row">
+            <div class="col gap-2 d-sm-flex" id="newArray">
+                <button type="button" class="btn btn-outline-success btn-dark newArray">New Array</button>
+            </div>
+            <div class="col" id="input">
+                <span id="size">Size
+                    <input id="arr_sz" type="range" min="5" max="100" step=1 value=60>
+                </span>
+                <span id="speed">Speed
+                    <input id="speed_input" type="range" min="20" max="300" stepDown=10 value=60>
+                </span>
+            </div>
+            <div class="col gap-2 d-sm-flex justify-content-end">
+                <button type="button" class="btn btn-outline-primary btn-dark bubbleSort">Bubble Sort</button>
+                <button type="button" class="btn btn-outline-secondary btn-dark selectionSort">Selection Sort</button>
+                <button type="button" class="btn btn-outline-success btn-dark insertionSort">Insertion Sort</button>
+                <button type="button" class="btn btn-outline-danger btn-dark quickSort">Quick Sort</button>
+                <button type="button" class="btn btn-outline-warning btn-dark mergeSort">Merge Sort</button>
+            </div>
         </div>
-        <div>
-            <button onclick="sort()" type="button" class="btn btn-primary">Bubble Sort</button>
-            <button type="button" class="btn btn-secondary">Insertion Sort</button>
-            <button type="button" class="btn btn-success">Merge Sort</button>
-            <button type="button" class="btn btn-danger">Quick Sort</button>
-            <button type="button" class="btn btn-warning">Selection Sort</button>
-        </div>
-    </div>
-
+    </nav>
+</header>
+<body class="p-3 mb-2 bg-dark text-white">
     
-    
+    <div id="bars" class="flex-container"></div>
 
-    <div id="Bar">
-
-
-    </div>
-
-    <canvas id="canvas", width="1200" height="300">
-
-    </canvas>
-
-
-    <!-- <button onclick="sort()" id="sort-btn" type="button" class="btn btn-outline-info">Sort</button> -->
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-    <script src="js files/sorting.js"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="js_files/sorting.js"></script>
+    <script src="js_files/bubble.js"></script>
+    <script src="js_files/insertion.js"></script>
+    <script src="js_files/merge.js"></script>
+    <script src="js_files/quick.js"></script>
+    <script src="js_files/selection.js"></script>
+</body>
 </html>
