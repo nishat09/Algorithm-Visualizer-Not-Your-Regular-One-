@@ -1,0 +1,1 @@
+In this project, I have built a algorithm visualizer which basically help us to understand how different sorting algorithm works. It's quite a fun project. You can also set the speed of sorting and size of the array. Right at this moment, It can visualize five soring algorithms. In future I plan to work more on it so that it can visualize path finding algorithms too.
